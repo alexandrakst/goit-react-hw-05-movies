@@ -1,0 +1,30 @@
+.homeList {
+  display: grid;
+  max-width: calc(100vw - 50px);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homeMovieTitle {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+
+.homeMovieImg {
+  height: 200px;
+  width: 300px;
+}
+
+.homeHeader {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+  margin: 40px;
+}

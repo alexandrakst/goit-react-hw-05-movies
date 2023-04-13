@@ -1,0 +1,35 @@
+.layoutList {
+  display: flex;
+  margin-left: 35px;
+}
+
+.layoutLink {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  margin-right: 50px;
+  font-size: 25px;
+}
+
+.layoutLi {
+  list-style-type: none;
+}
+
+.layoutHeader {
+  margin-left: 30px;
+}
+
+/* .layoutLine {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  width: 100%;
+} */
+
+.layoutLine:after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 88%;
+  padding-top: 20px;
+  border-bottom: 1px solid black;
+}
