@@ -25,6 +25,11 @@
 .homeHeader {
   text-align: center;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 20px;
   margin: 40px;
+}
+
+.homeP:hover {
+  cursor: pointer;
+  color: steelblue;
 }

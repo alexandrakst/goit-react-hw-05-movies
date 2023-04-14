@@ -1,0 +1,5 @@
+.reviewsUl {
+  list-style-type: none;
+  display: block;
+  padding-left: 80px;
+}

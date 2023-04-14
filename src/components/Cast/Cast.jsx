@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { creditsById } from 'api/Api';
 import { Suspense } from 'react';
+import css from './Cast.module.css';
 
 export default function Cast() {
   const [cast, setCast] = useState(null);
@@ -25,11 +26,11 @@ export default function Cast() {
 
   return (
     <Suspense>
-      <ul>
+      <ul className={css.castUl}>
         {cast?.map(actor => {
           const { character, name, profile_path: profilePath, id } = actor;
           return (
-            <li key={id}>
+            <li key={id} className={css.castLi}>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${profilePath}`}
                 alt={name}

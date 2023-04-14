@@ -1,21 +1,29 @@
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
+import styled from 'styled-components';
+
+const StyledLink = styled(NavLink)`
+  color: black;
+  &.active {
+    color: steelblue;
+  }
+`;
 
 export default function Layout() {
   return (
-    <div>
+    <div className={css.layoutDiv}>
       <header className={css.layoutLine}>
         <ul className={css.layoutList}>
           <li className={css.layoutLi}>
-            <NavLink className={css.layoutLink} to="/">
+            <StyledLink className={css.layoutLink} to="/">
               Home Page
-            </NavLink>
+            </StyledLink>
           </li>
           <li className={css.layoutLi}>
-            <NavLink className={css.layoutLink} to="/movies">
+            <StyledLink className={css.layoutLink} to="/movies">
               Movies
-            </NavLink>
+            </StyledLink>
           </li>
         </ul>
       </header>

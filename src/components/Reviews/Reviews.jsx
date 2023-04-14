@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { reviewsById } from 'api/Api';
 import { Suspense } from 'react';
+import css from './Reviews.module.css';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState(null);
@@ -27,7 +28,7 @@ export default function Reviews() {
 
   return (
     <Suspense>
-      <ul>
+      <ul className={css.reviewsUl}>
         {isReviews ? (
           reviews.map(({ author, content, id }) => (
             <li key={id}>

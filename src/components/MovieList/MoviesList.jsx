@@ -6,9 +6,13 @@ export default function MovieList({ movies }) {
   const location = useLocation();
 
   return (
-    <ul className={css.list}>
+    <ul className={css.movieList}>
       {movies.map(movie => (
-        <li key={movie.id}>
+        <li className={css.li} key={movie.id}>
+          <img
+            src={`https://image.tmdb.org/t/p/w300${movie.backdrop_path}`}
+            alt={movie.title}
+          />
           <Link
             className={css.link}
             to={`/movies/${movie.id}`}

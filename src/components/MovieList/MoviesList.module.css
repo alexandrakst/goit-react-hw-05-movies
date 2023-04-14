@@ -1,3 +1,19 @@
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin: 40px 20px;
+}
 
+.li {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
 
-
+.link {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}

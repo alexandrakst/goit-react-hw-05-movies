@@ -36,7 +36,7 @@ export default function Home() {
               alt={movie.title}
               className={css.homeMovieImg}
             />
-            <p>{movie.title || movie.name}</p>
+            <p className={css.homeP}>{movie.title || movie.name}</p>
           </Link>
         ))}
       </ul>

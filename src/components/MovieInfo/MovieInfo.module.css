@@ -1,0 +1,8 @@
+.movieInfoLayout {
+  display: flex;
+  margin: 30px 73px;
+}
+
+.movieInfo {
+  margin-left: 40px;
+}

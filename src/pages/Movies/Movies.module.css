@@ -1,0 +1,25 @@
+.moviesForm {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
+.moviesInput {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: black;
+  margin: 20px;
+}
+
+.moviesBtn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-color: black;
+  margin: 20px;
+  border: none;
+}
+
+.moviesBtn:hover {
+  cursor: pointer;
+  color: steelblue;
+}

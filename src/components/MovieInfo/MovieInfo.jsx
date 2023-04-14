@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './MovieInfo.module.css';
 
 export default function MovieInfo({ movie }) {
   const {
@@ -10,23 +11,26 @@ export default function MovieInfo({ movie }) {
     genres,
   } = movie;
 
+  const vote = Math.round(voteAverage);
+
   const getFullYear = dateString => {
     const date = new Date(dateString);
     return date.getFullYear();
   };
+
   return (
-    <div>
+    <div className={css.movieInfoLayout}>
       <img
         src={`https://image.tmdb.org/t/p/original/${posterPath}`}
         alt={title}
-        height="348"
+        height="400"
       />
-      <div>
+      <div className={css.movieInfo}>
         <h2>
           {title} ({getFullYear(releaseDate)})
         </h2>
         <p>
-          User Score: <span>{voteAverage}</span>
+          User Score: <span>{vote}</span>
         </p>
         <h3>Overview</h3>
         <p>{overview}</p>

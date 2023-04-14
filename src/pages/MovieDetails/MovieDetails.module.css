@@ -1,0 +1,52 @@
+.movieDetails {
+  margin: 30px 73px;
+}
+
+.movieDetailsLi {
+  list-style-type: none;
+  text-decoration: none;
+  width: 85px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.movieDetailsLi:hover {
+  cursor: pointer;
+  color: steelblue;
+}
+
+.movieDetailsBtn {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 10px 10px;
+  margin: 0;
+  color: black;
+}
+
+.movieDetailsBtn:hover {
+  color: steelblue;
+}
+
+.movieDetailsUl {
+  padding-left: 0;
+  display: flex;
+}
+
+.movieDetailsBackBtn {
+  text-decoration: none;
+  display: block;
+  width: 85px;
+  margin: 20px 75px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  text-align: center;
+  color: black;
+}
+
+.movieDetailsBackBtn:hover {
+  cursor: pointer;
+  color: steelblue;
+}

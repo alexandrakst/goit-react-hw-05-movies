@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState, useRef } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { movieById } from 'api/Api';
+import css from './MovieDetails.module.css';
 
 export default function MovieDetails() {
   const [movie, setMovie] = useState(null);
@@ -30,6 +31,7 @@ export default function MovieDetails() {
       {movie && (
         <div>
           <Link
+            className={css.movieDetailsBackBtn}
             to={backLinkLocationRef.current ? backLinkLocationRef.current : '/'}
           >
             Go back
@@ -37,14 +39,24 @@ export default function MovieDetails() {
           <MovieInfo movie={movie} />
         </div>
       )}
-      <div>
+      <div className={css.movieDetails}>
         <h3>Additional information</h3>
-        <ul>
-          <li>
-            <Link to={`/movies/${movieId}/cast`}>Cast</Link>
+        <ul className={css.movieDetailsUl}>
+          <li className={css.movieDetailsLi}>
+            <Link
+              className={css.movieDetailsBtn}
+              to={`/movies/${movieId}/cast`}
+            >
+              Cast
+            </Link>
           </li>
-          <li>
-            <Link to={`/movies/${movieId}/reviews`}>Reviews</Link>
+          <li className={css.movieDetailsLi}>
+            <Link
+              className={css.movieDetailsBtn}
+              to={`/movies/${movieId}/reviews`}
+            >
+              Reviews
+            </Link>
           </li>
         </ul>
       </div>

@@ -2,6 +2,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useState, useEffect, Suspense } from 'react';
 import { movieQuerySearch } from 'api/Api';
 import MovieList from '../../components/MovieList/MoviesList';
+import css from './Movies.module.css';
 
 export default function Movies() {
   const [inputValue, setInputValue] = useState('');
@@ -46,9 +47,16 @@ export default function Movies() {
   return (
     <>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <form onSubmit={onSubmit}>
-          <input type="text" value={inputValue} onChange={onChange} />
-          <button type="submit">search</button>
+        <form className={css.moviesForm} onSubmit={onSubmit}>
+          <input
+            className={css.moviesInput}
+            type="text"
+            value={inputValue}
+            onChange={onChange}
+          />
+          <button className={css.moviesBtn} type="submit">
+            Search
+          </button>
         </form>
         {movies !== null && movies.length !== 0 && (
           <MovieList movies={movies}></MovieList>
